@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sample Household Chore Chart</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #233044;
+      background: #f3f6f9;
+    }
+
+    * { box-sizing: border-box; }
+
+    body { margin: 0; padding: 2rem 1rem; }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 28px #172a3a18;
+    }
+
+    header {
+      padding: 1.5rem;
+      color: #fff;
+      text-align: center;
+      background: linear-gradient(130deg, #233044, #39769b);
+      border-radius: 8px;
+    }
+
+    h1 { margin: 0 0 .4rem; font-size: 1.8rem; }
+    header p { margin: 0; }
+    section { margin-top: 1.7rem; }
+    h2 { margin-bottom: .7rem; font-size: 1.2rem; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: .7rem;
+      text-align: left;
+      border-bottom: 1px solid #dce4eb;
+    }
+
+    th { color: #fff; background: #334b60; }
+    tbody tr:nth-child(even) { background: #f5f8fa; }
+    .summary { color: #526477; font-size: .92rem; }
+    .badge {
+      display: inline-block;
+      padding: .2rem .55rem;
+      color: #174f3c;
+      background: #e3f4ec;
+      border-radius: 999px;
+      font-size: .85rem;
+    }
+
+    .print-button {
+      display: block;
+      margin: 0 auto 1rem;
+      padding: .65rem 1rem;
+      color: #fff;
+      background: #28648b;
+      border: 0;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    @media print {
+      :root { background: #fff; }
+      body { padding: 0; }
+      main { max-width: none; padding: 0; box-shadow: none; }
+      .print-button { display: none; }
+      header, th { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-button" type="button" onclick="window.print()">Print or save as PDF</button>
+  <main>
+    <header>
+      <h1>Sample Household Chore Chart</h1>
+      <p>Week of October 26, 2026</p>
+    </header>
+
+    <section>
+      <h2>Weekly assignments</h2>
+      <table>
+        <thead>
+          <tr><th>Task</th><th>Assigned to</th><th>Due</th><th>Effort</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Kitchen reset</td><td>Avery</td><td>Saturday</td><td>30 min</td></tr>
+          <tr><td>Bathroom clean</td><td>Blair</td><td>Saturday</td><td>35 min</td></tr>
+          <tr><td>Vacuum shared spaces</td><td>Casey</td><td>Saturday</td><td>25 min</td></tr>
+          <tr><td>Fold shared laundry</td><td>Devon</td><td>Saturday</td><td>20 min</td></tr>
+          <tr><td>Sort recycling</td><td>Avery</td><td>Saturday</td><td>10 min</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Estimated workload</h2>
+      <table>
+        <thead>
+          <tr><th>Participant</th><th>Tasks</th><th>Estimated effort</th><th>Check</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Avery</td><td>2</td><td>40 min</td><td><span class="badge">Within range</span></td></tr>
+          <tr><td>Blair</td><td>1</td><td>35 min</td><td><span class="badge">Within range</span></td></tr>
+          <tr><td>Casey</td><td>1</td><td>25 min</td><td><span class="badge">Within range</span></td></tr>
+          <tr><td>Devon</td><td>1</td><td>20 min</td><td><span class="badge">Within range</span></td></tr>
+        </tbody>
+      </table>
+      <p class="summary">Task counts differ by at most one. Estimated effort is approximate, not measured time.</p>
+    </section>
+
+    <section>
+      <h2>Notes</h2>
+      <p class="summary">This is invented sample data for a portfolio demonstration. It is not a real household schedule.</p>
+    </section>
+  </main>
+</body>
+</html>
